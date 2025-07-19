@@ -1,0 +1,227 @@
+/* Import Poppins font from Google Fonts for a modern look */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Reset default browser styles and set base font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header styles: fixed at the top, blurred background, flex layout */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  z-index: 99;
+}
+
+/* Logo styling */
+.logo {
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  margin-right: auto;
+}
+
+/* Navigation links styling */
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+}
+
+/* User authentication area */
+.user-auth {
+  margin-left: 40px;
+}
+
+/* Login button in header */
+.user-auth .login-btn-modal {
+  height: 40px;
+  padding: 0 35px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .5s;
+}
+
+/* Login button hover effect */
+.user-auth .login-btn-modal:hover {
+  background: #fff;
+  color: #222;
+}
+
+/* Main section with background image */
+section {
+  position: relative;
+  background: url('download (1).webp') no-repeat center center/cover;
+  min-height: 100vh;
+  padding: 0 100px;
+}
+
+/* Welcome message styling */
+section h1 {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  font-size: 25px;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Modal container for login/register forms */
+.auth-modal{
+  position: fixed;
+  width: 420px;
+  height: 440px;
+  background: rgba(0,0,0, .3);
+  border: 2px solid rgba(255,255,255, .3);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0,0,0, .3);
+  backdrop-filter: blur(20px);
+  color: #fff;
+  inset: 0;
+  margin: auto;
+  display: none; /* Hidden by default */
+  align-items: center;
+  overflow: hidden;
+  transition: height .2s ease, transform .5s ease;
+}
+
+/* Show modal when .show class is added */
+.auth-modal.show{
+  transform: scale(1);
+  display: flex;
+}
+
+/* Slide effect for register form */
+.auth-modal.slide{
+  height: 520px;
+}
+
+/* Form box styling for both login and register */
+.auth-modal .form-box{
+  width: 100%;
+  padding: 40px;
+}
+
+/* Show login form by default, register form slides in */
+.auth-modal .form-box.login,
+.auth-modal.slide .form-box.register{
+  transform: translateX(0);
+  transition: transform 0.1s ease;
+}
+
+/* Hide login form when sliding to register */
+.auth-modal.slide .form-box.login{
+  transform: translateX(-400px);
+  transition: none;
+}
+
+/* Register form is positioned off-screen by default */
+.auth-modal .form-box.register{
+  position: absolute;
+  transform: translateX(400px);
+}
+
+/* Form headings */
+.form-box h2{
+  font-size: 35px;
+  text-align: center;
+}
+
+/* Input box styling */
+.input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+
+/* Input fields */
+.input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 2px solid rgba(255,255,255, .3);
+  outline: none;
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+}
+
+/* Placeholder text color */
+.input-box input::placeholder{
+  color: #fff;
+}
+
+/* Icon inside input box */
+.input-box i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+/* Form buttons */
+.btn{
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0,0,0, .1);
+  font-size: 16px;
+  color: #222;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Paragraphs in forms */
+.form-box p{
+  font-size: 14.5px;
+  text-align: center;
+  margin: 25px 0 10px;
+}
+
+/* Links in forms */
+.form-box p a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Hover effect for links */
+.form-box p a:hover{
+  text-decoration: underline;
+}
+
+/* Close button for modal */
+.auth-modal .close-btn-modal{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background: #fff;
+  border: none;
+  border-bottom-left-radius: 20px;
+  font-size: 35px;
+  color: #222;
+  cursor: pointer;
+  z-index: 1;
+}

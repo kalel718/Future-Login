@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Future Login Form</title>
+    <!-- Link to external CSS for styling -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons for modern, clean icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <!-- Header: Contains logo, navigation, and login button -->
+    <header>
+      <!-- Logo (clickable, but currently just a placeholder) -->
+      <a href="#" class="logo">Logo</a>
+      <!-- Navigation bar with links to different sections -->
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Collection</a>
+        <a href="#">Contact</a>
+      </nav>
+      <!-- User authentication area with a login button -->
+      <div class="user-auth">
+        <button type="button" class="login-btn-modal">Login</button>
+      </div>
+    </header>
+
+    <!-- Main section with a welcoming message -->
+    <section>
+      <h1>Hey Developer!</h1>
+    </section>
+
+    <!-- Modal for authentication (login/register) -->
+    <div class="auth-modal">
+      <!-- Close button for the modal (X icon) -->
+      <button type="button" class="close-btn-modal"><i class='bx bx-x'></i></button>
+
+      <!-- Login form box (shown by default) -->
+      <div class="form-box login">
+        <h2>Login</h2>
+        <form action="">
+          <!-- Email input with envelope icon -->
+          <div class="input-box">
+            <input type="email" name="email" placeholder="Email" required>
+            <i class='bx bxs-envelope'></i>
+          </div>
+          <!-- Password input with lock icon -->
+          <div class="input-box">
+            <input type="password" name="password" placeholder="Password" required>
+            <i class='bx bxs-lock-alt'></i>
+          </div>
+          <!-- Login button -->
+          <button type="submit" name="login_btn" class="btn">Login</button>
+          <!-- Link to switch to register form -->
+          <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+        </form>
+      </div>
+
+      <!-- Register form box (slides in when triggered) -->
+      <div class="form-box register">
+        <h2>Register</h2>
+        <form action="">
+          <!-- Name input with user icon -->
+          <div class="input-box">
+            <input type="text" name="name" placeholder="Name" required>
+            <i class='bx bxs-user'></i>
+          </div>
+          <!-- Email input with envelope icon -->
+          <div class="input-box">
+            <input type="email" name="email" placeholder="Email" required>
+            <i class='bx bxs-envelope'></i>
+          </div>
+          <!-- Password input with lock icon -->
+          <div class="input-box">
+            <input type="password" name="password" placeholder="Password" required>
+            <i class='bx bxs-lock-alt'></i>
+          </div>
+          <!-- Register button -->
+          <button type="submit" name="register_btn" class="btn">Register</button>
+          <!-- Link to switch back to login form -->
+          <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+        </form>
+      </div>
+    </div>
+    <!-- Link to external JavaScript for modal functionality -->
+    <script src="script.js"></script>
+  </body>
+</html>
