@@ -14,7 +14,7 @@ Perfect for your next web app, portfolio, or any project that needs a stylish au
 
 ## 📸 Preview
 
-![screenshot](screenshot.png)
+https://magnificent-bubblegum-43d6b8.netlify.app/
 
 ## 🚦 How it Works
 
